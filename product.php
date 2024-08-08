@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bam shppping center products</title>
+     <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <htm>
+    <body>
+    <marquee backgroundcolor = "lightblue"><h1>BAM SHOPPING CENTER</h1></marquee>
+    </body>
+    </html>
+    <table>
+        <tr>
+             <marquee behavior="scroll" direction="right" scrollamount="12"><img src="images/g.jpg" alt="background"></td>
+            <td> </marquee>
+            
+             <a href="product.html" class="navbar-brand">
+                <marquee behavior="scroll" direction="left" scrollamount="12"> <h1> BAM SHOPPING CENTER </h1> </marquee>
+                </a>
+                <a href="product.html" class="navbar-brand">
+                    <marquee behavior="scroll" direction="right" scrollamount="12"><h2>QUALITY TELLS THE DIFFERENCE </h2> </marquee>
+                </a>
+            
+            </td>
+        </tr>
+    </table>
+
+   <table id="id-tbl-links">
+            <tr style="background-color: #333; overflow: hidden;">
+                <td id="id-blank"></td>
+                <td><a href="index.html"class="nav-item nav-link">index</a></td>
+                <td><a href="product.html"class="nav-item nav-link">products</a></td>
+                <td><a href="contact.html"class="nav-item nav-link">contact us</a></td>
+                <td><a href="gallery.html"class="nav-item nav-link">gallary</a></td>
+                <td><a href="about us.html"class="nav-item nav-link">about us</a></td>
+            </tr>
+         </table>
+         <button type="submit" name="submit-button" value="submit-value" form="my-form" formaction="/submit" formmethod="post" formtarget="_blank">enter search or web address</button>
+          <button type="button">search our products </button>
+<marquee bgcolor = "lightblue"><h2>view all our products at any time any where</h2></marquee>
+<marquee behavior="scroll" direction="up" scrollamount="2">View All Our Products At Any Of Yur Convent Time</marquee>
+<marquee behavior="scroll" direction="right" scrollamount="4">All You Need In One Place</marquee>
+<marquee behavior="scroll" direction="left" scrollamount="4">View more In The Gallary</marquee>
+<marquee behavior="scroll"direction="right"scrollamount="4">Quallity Tells The Difference</marquee>               
+<?php
+    $arrayItemName = array("packed rice","frozen meals","pet food","flour maize","soya flour","fido foods","tined meat","fish");
+    $arrayItemPrice = array("3500","5000/25000","6000/10000","11000", "6000", "12000","12000","18000");
+    $arrayItemImg = array("pk rice.jpg","fz.jpg","fdo.jpg","mz.jpg","so.jpg","fdo.jpg","mt.jpg","fis.jpg");
+?>
+
+<h1>we offer quality products to our customers at an affordable price</h1>
+
+    <h2>Food Items , Bevarages and Dairy Products </h2>
+
+        <table>
+            <?php
+                $i = 0;
+                $noOfItems = 1;
+                $j = 0;
+                
+                while($i < count($arrayItemName)){
+                    if($noOfItems == 1) {
+                        echo "<tr>";
+                        $j = $i;
+                    }
+                    echo '<td><img src="images/'.$arrayItemImg[$i].'" alt="background"></td>';
+                    $i = $i + 1;
+                    if($noOfItems == 4) {
+                        echo "</tr>";
+
+                        echo "<tr>";
+                        while($j != $i){
+                            echo '<td>'.$arrayItemName[$j].' '.$arrayItemPrice[$j].'</td>';
+                            $j++;
+                        }
+                        echo "</tr>";
+                    }
+
+                    $noOfItems++;
+                    if($noOfItems > 4) $noOfItems = 1;
+                }
+            ?>
+        </table>    
+
+    <!--<h3>FRESH PRODUCTS</h3>
+        
+               <table>
+                    
+            <tr class="prdt-imgs">
+                     <td><img src="images/org.jpg" alt="background"></td>
+                     <td><img src="images/mgo.jpg" alt="background"></td>
+                     <td><img src="images/caro.jpg" alt="background"></td>
+                     <td><img src="images/ap.jpg" alt="background"></td>
+            </tr>
+                   <tr>
+                       <th>oranges  1500/2500</th>
+                       <th>mangoes  1200</th>
+                       <th>carrotes  1500</th>
+                       <th>apples 1500</th>
+                
+                </tr>
+            
+            <tr>
+                  <td><img src="images/bri.jpg" alt="background"></td>
+                  <td><img src="images/oni.jpg" alt="background"></td>
+                  <td><img src="images/gpp.jpg" alt="background"></td>
+                  <td><img src="images/toms.jpg" alt="background"></td>
+            </tr>
+             <tr>
+                     <th>barries  15000</th>
+                     <th>oniones  3500</th>
+                     <th>green and red paper 1000</th>
+                     <th>tomatoes 3000</th>
+            </tr>
+        </table>  
+
+
+
+    <h4>PERSONAL CARE</h4>
+    
+    <table>
+        
+        <tr class="prdt-imgs">
+                 <td><img src="images/hose p.jpg" alt="background"></td>
+                 <td><img src="images/sop.jpg" alt="background"></td>
+                 <td><img src="images/colge.jpg" alt="background"></td>
+                 <td><img src="images/jll.jpg" alt="background"></td>
+        </tr>
+             <tr>
+            <th>shampoo 2500/40000</th>
+            <th>soap   2500/55000</th>
+            <th>toothpaste   1200/25000</th>
+            <th>jelly  1000/180000</th>
+        </tr>
+        
+        <tr>
+            <td><img src="images/fum.jpg" alt="background"></td>
+            <td><img src="images/gel.jpg" alt="background"></td>
+            <td><img src="images/lot.jpg" alt="background"></td>
+            <td><img src="images/crm.jpg" alt="background"></td>
+        </tr>
+            <tr>
+             <th>perfumes  1000/180000</th>
+             <th>shawer gels  500/55000</th>
+             <th>lotions  1000/100000</th>
+             <th>creams and glycilne 1000/180000</th>
+        </tr>
+        
+            <tr>
+                <td><img src="images/msg.jpg" alt="background"></td>
+                <td><img src="images/hr.jpg" alt="background"></td>
+                <td><img src="images/lot.jpg" alt="background"></td>
+                <td><img src="images/sop.jpg" alt="background"></td>
+            </tr>
+        <tr>
+            <th>massage gels 10000</th>
+            <th>braids 2500/50000</th>
+            <th>lotions 1000/100000</th>
+            <th>bathing soap 2500/35000</th>
+           </tr>
+        
+    </table>
+
+    
+    <h5>BAKERY</h5>
+    
+    <table>
+
+          <tr>
+                <td><img src="images/bd.jpg" alt="background"></td>
+                <td><img src="images/dds.jpg" alt="background"></td>
+                <td><img src="images/pz.jpg" alt="background"></td>
+                <td><img src="images/ck.jpg" alt="background"></td>
+                    
+          </tr>             
+             <tr>
+             <th>bread   1500/6500</th>
+              <th>daddies  1400/16000</th>
+              <th>pizza  500/3000000</th>
+              <th>cakes  500/55000</th>
+          </tr>
+       
+    </table>
+   
+       
+        
+    <h6>STATIONARIES</h6>
+    
+      <table>
+         
+        <tr class="prdt-imgs">
+            <td><img src="images/bk.jpg" alt="background"></td>
+            <td><img src="images/rm.jpg" alt="background"></td>
+            <td><img src="images/st.jpg" alt="background"></td>
+            <td><img src="images/rlr.jpg" alt="background"></td>
+        </tr>
+            <tr>
+            <th>books 700/35000</th>
+            <th>reams 15000/35000</th>
+            <th>sets 2500/4500</th>
+            <th>rulers 1000/5000</th>
+            
+        </tr>
+       
+        <tr>
+            <td><img src="images/pn.jpg" alt="background"></td>
+            <td><img src="images/rb.jpg" alt="background"></td>
+            <td><img src="images/pnc.jpg" alt="background"></td>
+            <td><img src="images/sbg.jpg" alt="background"></td>
+        </tr>
+         <tr>
+            <th>pens 5000/3000</th>
+            <th>rubbers 700/2500</th>
+            <th>penciles 700</th>
+            <th>school bags 15000 /65000</th>
+        </tr>
+    </table>  
+
+    
+     <h1>SNACKS</h1>
+     
+     <table>
+        
+        <tr class="prdt-imgs">
+            <td><img src="images/nut.jpg" alt="background"></td>
+            <td><img src="images/snacks.jpg" alt="background"></td>
+            <td><img src="images/ckie.jpg" alt="background"></td>
+            <td><img src="images/nut.jpg" alt="background"></td>
+        </tr>
+        <tr>
+            <th>crackers  2500/15000</th>
+            <th>seeds  15000</th>
+            <th>irish snacks 1400/10000</th>
+            <th>banana snacks 3000</th>
+        </tr>
+          
+        <tr>
+            <td><img src="images/cks.jpg" alt="background"></td>
+            <td><img src="images/sed.jpg" alt="background"></td>
+            <td><img src="images/iri.jpg" alt="background"></td>
+            <td><img src="images/snacks.jpg" alt="background"></td>
+        </tr>
+            <tr>
+            <th>dried fruits 5000</th>
+            <th>potato snacks 1400</th>
+            <th>cookies  3500/35000</th>
+            <th>nuts  2500</th>
+            
+        </tr>
+    </table>-->
+     
+    <footer>
+         <table id="id-table4">
+            <tr>
+                <th>contact us</th>
+                <th>other out lets</th>
+                <th>online shopping</th>
+            </tr>
+    
+        
+            <td class="td-width">
+                <table>
+                        <tr>
+                            <td style="width:0px;"><img style="width: 50px;height: 50px;" src="images/call ico.jpg" alt="background"></td>
+                            <td>
+               <ul>
+                    <li>+256 792441659 </li>
+                    <li>+256 759 820724</li>
+                    <li>+256 772 441659</li>
+                    
+                </ul>
+
+            </td>
+          
+            </tr>
+        </table>
+    </td>
+           
+            <td class="td-width">
+                <ul>
+                    <li>rates motel</li>
+                    <li>bills motel</li>
+                    <li>rates hotel</li>
+                    <li>guuga moal</li>
+                    <li>travellers inn</li>
+                </ul>
+            </td>
+            
+             <td class="td-width">
+                <ul>
+                    <li>email address bamshopping@yahoo.com</li>
+                    <li>www.bamshoppingcenter.com</li>
+                    <li>+256 702 441659</li>
+                    
+                </ul>
+            </td>
+        </tr>
+        </table>
+         <p>Author:Jolly Justine Katooko</p>
+        <p><a href="katooko123@gmail.com">katooko123@gmail.com</a></p>
+        <p>contact: +256 758 065990</p>
+        
+
+      </footer> 
+
+             
+     
+       
+</body>
+</html>
